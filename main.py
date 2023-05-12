@@ -31,7 +31,7 @@ filename = args.filename
 if not filename.endswith('.csv'):
     filename += '.csv'
 if os.path.exists(filename):
-    raise ValueError(f'Plik {filename} już istnieje.')
+    raise ValueError(f'File {filename} already exists.')
 with open(filename, mode='w', newline='') as file:
     writer = csv.DictWriter(file, fieldnames=['Data', 'Temp min'])
     writer.writeheader()
